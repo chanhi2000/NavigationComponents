@@ -1,0 +1,38 @@
+ext {
+    versions = [
+            // plugins
+            gradle: '4.10.1',
+            android: '3.1.0',
+            kotlin: '1.3.40',
+
+            // dependencies
+            androidx:           '1.0.2',
+            constraintLayout:   '1.1.3',
+            legacySupport:      '1.0.0',
+            
+            androidx_nav: '2.1.0-alpha05',
+            material: '1.1.0-alpha07',
+
+            junit	: '4.12'
+    ]
+
+    cp = [
+            android: "com.android.tools.build:gradle:$versions.android",
+            kotlin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+    ]
+
+    dep = [
+            kotlin_stdlib: "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin",
+            androidx:  ["androidx.appcompat:appcompat:$versions.androidx",
+                        "androidx.core:core-ktx:$versions.androidx",
+                        "androidx.constraintlayout:constraintlayout:$versions.constraintLayout",
+                        "androidx.legacy:legacy-support-v4:$versions.legacySupport"],
+            
+            androidx_nav: ["androidx.navigation:navigation-fragment-ktx:$versions.androidx_nav",
+                    "androidx.navigation:navigation-ui-ktx:$versions.androidx_nav"],
+            
+            material : "com.google.android.material:material:$versions.material",
+            
+            junit : "junit:junit:$versions.junit"
+    ]
+}
